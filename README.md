@@ -1,17 +1,11 @@
-# common
- request: { 
-    partnerId: number | undefined,
-    entityName: string | undefined,
-    pan: string | undefined,
-    loanAmount: number | undefined,
-    emailId: string | undefined,
-    mobileNo: string | undefined
-  }
+let lead = {
+                  ...leadInfo,
+                  ...values,
+                  parentId: partner.id,
+                  bankStatement: values.bankStatementLocal ? 'Y' : 'N',
+                  gstRegime: values.gstRegimeLocal ? 'Y' : 'N',
+                  itrFiling: values.itrFilingLocal ? 'Y' : 'N',
+                  // dateOfIncorp: Moment(values.dateOfIncorp).format('YYYY-MM-DD'),
+                };
 
-
- return fetch(`${apiEndpoint}/api/partners/${request.partnerId}/sendConsent`, {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
+https://apiuat.sidbi.in/connect-app/api/partners/0/leads
