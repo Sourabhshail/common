@@ -1,4 +1,17 @@
 # common
- encryptedValue = {
-            password: `${Math.random().toString(36).slice(2, 8)}${data.salt2}${hash}${data.salt1}${Math.random().toString(36).slice(2, 8)}`, 
-            key: data.key}
+ request: { 
+    partnerId: number | undefined,
+    entityName: string | undefined,
+    pan: string | undefined,
+    loanAmount: number | undefined,
+    emailId: string | undefined,
+    mobileNo: string | undefined
+  }
+
+
+ return fetch(`${apiEndpoint}/api/partners/${request.partnerId}/sendConsent`, {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
