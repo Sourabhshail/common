@@ -38,5 +38,22 @@ https://apiuat.sidbi.in/connect-app/api/partners/0/leads
   otp?: string;
   dateCreated?: string;
   leadStatus?: string;
+
+
+    const getStatus = (status: string | undefined) => {
+    if (status === '0') {
+      return 'Lead Created';
+    } else if (status === '1') {
+      return 'Application Filing Started';
+    } else if (status === '2') {
+      return 'Application Filed';
+    } else if (status === '3') {
+      return 'Appraisal In Progress';
+    } else if (status === '4') {
+      return 'Sanctioned';
+    } else if (status === '5') {
+      return 'Application Rejected';
+    }
+  };
   
   
