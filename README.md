@@ -56,4 +56,18 @@ https://apiuat.sidbi.in/connect-app/api/partners/0/leads
     }
   };
   
-  
+  const getColor = (status: string | undefined) => {
+    if (status === '0') {
+      return '#ffcd3d';
+    } else if (status === '1') {
+      return '#d88b5d';
+    } else if (status === '2') {
+      return '#6f8661';
+    } else if (status === '3') {
+      return '#ffcd3d';
+    } else if (status === '4') {
+      return '#d88b5d';
+    } else if (status === '5') {
+      return '#6f8661';
+    }
+  };
